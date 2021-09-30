@@ -38,8 +38,8 @@ export const hitComponent = Hit;
 export const index = {
   indexName: 'instant_search',
   searchParameters: {
-    analytics: true,
-    clickAnalytics: true,
+    analytics: false,
+    clickAnalytics: false,
     hitsPerPage: 18,
     attributesToSnippet: ['description:25'],
   },

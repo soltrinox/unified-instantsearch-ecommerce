@@ -21,7 +21,7 @@ export const FacetSearchBox = (props) => {
           spellCheck="false"
           required=""
           maxLength={512}
-          className="ais-SearchBox-input"
+          className="ais-SearchBox-input2"
           value={props.query}
           onChange={props.onChange}
         />

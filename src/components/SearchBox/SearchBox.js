@@ -23,6 +23,17 @@ export const SearchBox = (props) => {
     props.onReset();
   }
 
+  const handleChange = (e) => {
+    // Trim value & convert to lowercase
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+    const value = e.target.value.trim().toLowerCase();
+e.currentTarget.focus();
+    props.refine(e.currentTarget.value);
+    e.currentTarget.blur();
+  };
+
   React.useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
@@ -103,6 +114,7 @@ export const SearchBox = (props) => {
             id="unified-input"
             aria-labelledby="unified-label"
             type="search"
+            autoFocus={true}
             autoComplete="off"
             autoCorrect="off"
             autoCapitalize="off"
@@ -110,7 +122,9 @@ export const SearchBox = (props) => {
             maxLength={512}
             placeholder={props.translations.placeholder}
             value={props.currentRefinement}
-            onChange={props.onChange}
+            
+            onBlur={handleChange}
+            onChange={handleChange}
             onKeyDown={props.onKeyDown}
           />
         </div>

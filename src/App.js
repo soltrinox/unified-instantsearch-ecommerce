@@ -162,6 +162,21 @@ export function App({ config }) {
       }
     }
 
+    // function openDefault(event){
+    //   if (!isOverlayShowing) {
+    //     if (
+    //       config.keyboardShortcuts &&
+    //       config.keyboardShortcuts.indexOf(event.key) !== -1
+    //     ) {
+    //       event.stopPropagation();
+    //       event.preventDefault();
+    //       setIsOverlayShowing(true);
+    //     }
+    //   }
+    // }
+
+    // window.addEventListener('onload', openDefault);
+
     window.addEventListener('keydown', onKeydown);
 
     return () => {

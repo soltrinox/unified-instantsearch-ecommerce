@@ -9,7 +9,7 @@ export default merge(base, {
   devServer: {
     contentBase: './public',
     hot: true,
-    port: 3000,
+    port: 9000,
     host: '0.0.0.0',
     disableHostCheck: true,
   },
